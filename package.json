@@ -1,0 +1,23 @@
+{
+  "name": "todolist-backend",
+  "version": "1.0.0",
+  "description": "to dp list using node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "express",
+    "middleware"
+  ],
+  "author": "Rutuja",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "env": "0.0.2",
+    "express": "^4.17.1",
+    "uniqid": "^5.2.0"
+  }
+}
