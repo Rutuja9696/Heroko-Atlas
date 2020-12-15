@@ -9,9 +9,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/todoList", router);
-// app.use("/todoList", express.static(path.join(__dirname, "public")));
 
 app.listen(process.env.PORT, console.log(`app started on ${process.env.PORT}`));
+//connecting to db
 mongoose.connect(
   process.env.DATABASE_URL,
   { useNewUrlParser: true, useUnifiedTopology: true },

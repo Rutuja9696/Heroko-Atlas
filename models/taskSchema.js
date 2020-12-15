@@ -32,11 +32,7 @@ const taskSchema = new mongoose.Schema({
   completedAt: {
     type: Date,
   },
-  // sharedWith:{
-  //   type: [{mongoose.ObjectId}],
-  // },
 });
-// taskSchema.virtual("timeTaken").get((function)=>{
-// }
+
 const Task = mongoose.model("Task", taskSchema);
 module.exports = Task;
