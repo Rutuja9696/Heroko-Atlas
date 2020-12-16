@@ -35,7 +35,7 @@ const getAllTasks = (req, res, next) => {
     });
 };
 //fetch by id
-// const getById = (req, res, next) => {};
+const getById = (req, res, next) => {};
 //add task
 const createTask = (req, res, next) => {
   let newTask = new Task({ taskName: req.body.taskName });
@@ -74,7 +74,7 @@ const deleteTask = (req, res, next) => {
     });
 };
 module.exports.verifyPostRequest = verifyPostRequest;
-// module.exports.getById = getById;
+module.exports.getById = getById;
 module.exports.getAllTasks = getAllTasks;
 module.exports.createTask = createTask;
 module.exports.updateStatus = updateStatus;
