@@ -1,14 +1,14 @@
 # todoList_nodejs
 
-# 1.TITLE:\
+# 1.TITLE:
 
 Todo List backend
 
-# 2.DESCRIPTION: \
+# 2.DESCRIPTION:
 
 This aims to create backend for the todo list.It can perform all crud operations like fetch all tasks,fetch task by id,create task,update task and delete task .This project is done using express server.Output is viewed on Postman.
 
-# 3.FILE DETAILS:\
+# 3.FILE DETAILS:
 
 a.controller:\
  This file contains all the functions of actions that can be performed.Here ,it includes the controller to fetch all the task ,fetch task by id, create task,update task and delete task.\
@@ -23,7 +23,7 @@ d.routes:\
  f.package.json:\
  It has a record of details such as name,version,description,dependencies,script,author,repository,etc with respect to the current folder.
 
-# OUTPUT:\
+# OUTPUT:
 
 steps to check output:\
 1.Install postman and mongodb.\
@@ -37,7 +37,7 @@ steps to check output:\
 9.Add request (patch) to update-task-by-id (url:http://localhost:5000/todoList/tasks/< taskId of task to update>)\
 10.Add request (delete) to delete-task-by-id (url:http://localhost:5000/todoList/tasks/< taskId of task to delete>)
 
-# DEMO:\
+# DEMO:
 
 refer the heroko link to view the demo :\
 1.create task(url:)\
