@@ -32,6 +32,11 @@ const getAllTasks = (req, res, next) => {
     })
     .catch((err) => {
       console.log(err);
+      sendErrorMessage(
+        new AppError(400, "unsuccessful", "request body is inavlid"),
+        req,
+        res
+      );
     });
 };
 //fetch by id
@@ -47,6 +52,11 @@ const createTask = (req, res, next) => {
     })
     .catch((err) => {
       console.log(err);
+      sendErrorMessage(
+        new AppError(400, "unsuccessful", "request body is inavlid"),
+        req,
+        res
+      );
     });
 };
 //update status
@@ -58,19 +68,32 @@ const updateStatus = (req, res, next) => {
   )
     .then((data) => {
       console.log(data);
+      sendResponse(201, "Successful", data, req, res);
     })
     .catch((err) => {
       console.log(err);
+      sendErrorMessage(
+        new AppError(400, "unsuccessful", "request body is inavlid"),
+        req,
+        res
+      );
     });
 };
 //delete task
 const deleteTask = (req, res, next) => {
-  Task.findOneAndDelete({ status: "completed" })
+  console.log(req.params.id);
+  Task.findOneAndDelete({ taskId: req.params.id })
     .then((data) => {
       console.log(data);
+      sendResponse(201, "Successful", data, req, res);
     })
     .catch((err) => {
       console.log(err);
+      sendErrorMessage(
+        new AppError(400, "unsuccessful", "Id not found"),
+        req,
+        res
+      );
     });
 };
 module.exports.verifyPostRequest = verifyPostRequest;

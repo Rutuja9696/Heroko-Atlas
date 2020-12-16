@@ -13,7 +13,6 @@ router
   .route("/tasks")
   .get(getAllTasks)
   .post(verifyPostRequest, createTask)
-  .patch(updateStatus)
-  .delete(deleteTask);
-
+  .patch(updateStatus);
+router.route("/tasks/:id").delete(deleteTask);
 module.exports = router;
