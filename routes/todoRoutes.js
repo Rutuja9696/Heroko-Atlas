@@ -2,6 +2,7 @@ const express = require("express");
 const {
   verifyPostRequest,
   getAllTasks,
+  getById,
   createTask,
   updateStatus,
   deleteTask,
@@ -9,10 +10,6 @@ const {
 
 const router = express.Router();
 
-router
-  .route("/tasks")
-  .get(getAllTasks)
-  .post(verifyPostRequest, createTask)
-  .patch(updateStatus);
-router.route("/tasks/:id").delete(deleteTask);
+router.route("/tasks").get(getAllTasks).post(verifyPostRequest, createTask);
+router.route("/tasks/:id").delete(deleteTask).patch(updateStatus).get(getById);
 module.exports = router;
