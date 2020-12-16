@@ -64,8 +64,18 @@ const updateStatus = (req, res, next) => {
     });
 };
 //delete task
+const deleteTask = (req, res, next) => {
+  Task.findOneAndDelete({ status: "completed" })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
 module.exports.verifyPostRequest = verifyPostRequest;
 // module.exports.getById = getById;
 module.exports.getAllTasks = getAllTasks;
 module.exports.createTask = createTask;
 module.exports.updateStatus = updateStatus;
+module.exports.deleteTask = deleteTask;
