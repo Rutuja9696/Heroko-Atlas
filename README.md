@@ -36,12 +36,3 @@ steps to check output:\
 8.Add request (get) to get-task-by-id (url:http://localhost:5000/todoList/tasks/< \_id of task to fetch>) \
 9.Add request (patch) to update-task-by-id (url:http://localhost:5000/todoList/tasks/< taskId of task to update>)\
 10.Add request (delete) to delete-task-by-id (url:http://localhost:5000/todoList/tasks/< taskId of task to delete>)
-
-# DEMO:
-
-refer the heroko link to view the demo :\
-1.create task(url:)\
-2.get all task(url:)\
-3.Get task by id(url:)\
-4.Update task(url:)\
-5.Delete task(url:)
