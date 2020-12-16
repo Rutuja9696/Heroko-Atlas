@@ -34,6 +34,8 @@ const getAllTasks = (req, res, next) => {
       console.log(err);
     });
 };
+//fetch by id
+// const getById = (req, res, next) => {};
 //add task
 const createTask = (req, res, next) => {
   let newTask = new Task({ taskName: req.body.taskName });
@@ -47,7 +49,23 @@ const createTask = (req, res, next) => {
       console.log(err);
     });
 };
-
+//update status
+const updateStatus = (req, res, next) => {
+  Task.findOneAndUpdate(
+    { taskName: "added new task" },
+    { status: "completed" },
+    { useFindAndModify: false, new: true }
+  )
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+//delete task
+module.exports.verifyPostRequest = verifyPostRequest;
+// module.exports.getById = getById;
 module.exports.getAllTasks = getAllTasks;
 module.exports.createTask = createTask;
-module.exports.verifyPostRequest = verifyPostRequest;
+module.exports.updateStatus = updateStatus;
