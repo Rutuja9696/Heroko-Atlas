@@ -40,8 +40,8 @@ steps to check output:\
 # DEMO:\
 
 refer the heroko link to view the demo :\
-1.create task
-2.get all task
-3.Get task by id
-4.Update task
-5.Delete task
+1.create task(url:)\
+2.get all task(url:)\
+3.Get task by id(url:)\
+4.Update task(url:)\
+5.Delete task(url:)
