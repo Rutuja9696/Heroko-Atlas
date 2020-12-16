@@ -1,12 +1,19 @@
 const express = require("express");
 const {
+  verifyPostRequest,
   getAllTasks,
   createTask,
-  verifyPostRequest,
+  updateStatus,
+  deleteTask,
 } = require("../controllers/taskController");
 
 const router = express.Router();
 
-router.route("/tasks").get(getAllTasks).post(verifyPostRequest, createTask);
+router
+  .route("/tasks")
+  .get(getAllTasks)
+  .post(verifyPostRequest, createTask)
+  .patch(updateStatus)
+  .delete(deleteTask);
 
 module.exports = router;
