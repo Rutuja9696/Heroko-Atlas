@@ -12,7 +12,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/todoList", router);
 
-app.listen(process.env.PORT, console.log(`app started on ${process.env.PORT}`));
 //connecting to db
 mongoose.connect(
   process.env.DATABASE_URL,
@@ -22,5 +21,9 @@ mongoose.connect(
       console.log(err);
       return console.log("Error in connecting to database");
     }
+    app.listen(
+      process.env.PORT,
+      console.log(`app started on ${process.env.PORT}`)
+    );
   }
 );
